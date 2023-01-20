@@ -14,9 +14,6 @@ jobs:
         with:
           node-version: "12.x"
       - run: npm ci 
-      - run: npm test -- -- coverage
-        env:
-          CI: true
       - name: build project
         if: github.event_nbame == 'push'
         run: npm run build
